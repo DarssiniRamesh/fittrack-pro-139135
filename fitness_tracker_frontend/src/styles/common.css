@@ -1,0 +1,122 @@
+/* Shared design tokens and utilities imported from assets/common.css, adapted for React project */
+:root {
+  /* Design tokens */
+  --color-d9d9d9: #d9d9d9;
+  --color-1f1f1e: #1f1f1e;
+  --color-1f1e1f: #1f1e1f;
+  --color-9b9b9b: #9b9b9b;
+  --color-ffffff: #ffffff;
+  --color-b5b5b5: #b5b5b5;
+  --color-000000: #000000;
+  --color-c0c0c0: #c0c0c0;
+  --color-888888: #888888;
+  --color-8189b0: #8189b0;
+  --color-7f7fa6: #7f7fa6;
+  --color-8f6ff5: #8f6ff5;
+  --color-9e9e9e: #9e9e9e;
+  --color-d86661: #d86661;
+  --color-eeeeee: #eeeeee;
+  --color-e7e7e7: #e7e7e7;
+  --color-c15ab7: #c15ab7;
+  --color-069ea3: #069ea3;
+  --color-e6f3f6: #e6f3f6;
+  --color-1ca5c3: #1ca5c3;
+  --color-54f450: #54f450;
+  --color-f45050: #f45050;
+  --color-20201f: #20201f;
+  --color-069ea2: #069ea2;
+  --color-d7d7d7: #d7d7d7;
+  --color-c7c9cf: #c7c9cf;
+
+  /* Ocean Professional theme */
+  --ocean-primary: #2563EB;
+  --ocean-secondary: #F59E0B;
+  --ocean-error: #EF4444;
+  --ocean-bg: #f9fafb;
+  --ocean-surface: #ffffff;
+  --ocean-text: #111827;
+
+  /* Typography */
+  --font-poppins: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-open-sans: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+
+  /* Shadow tokens mapped from design system */
+  --shadow-0: 49.413097px 63.138962px 122.160172px 0px rgba(0,0,0,1);
+  --shadow-1: 48.999996px 3.9999998px 85px 0px rgba(0,0,0,1);
+  --shadow-2: 14px 23px 97px 0px rgba(0,0,0,1);
+  --shadow-3: 0px 3px 30px 0px rgba(0,0,0,1);
+  --shadow-4: 14px 23px 44px 0px rgba(0,0,0,1);
+  --shadow-5: 0px 4px 10px 0px rgba(0,0,0,1);
+  --shadow-6: 49.413105px 63.138969px 122.160179px 0px rgba(0,0,0,1);
+  --shadow-7: 49px 4px 85px 0px rgba(0,0,0,1);
+  --shadow-8: 14px 23px 97px 0px rgba(0,0,0,1);
+  --shadow-9: 0px 3px 30px 0px rgba(0,0,0,1);
+  --shadow-10: 14px 23px 44px 0px rgba(0,0,0,1);
+  --shadow-11: 0px 4px 10px 0px rgba(0,0,0,1);
+}
+
+/* Global base aligning with app theme */
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--ocean-bg);
+  color: var(--ocean-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.frame { display: block; }
+.text { display: block; white-space: pre; }
+.icon { display: block; }
+.rect { display: block; }
+.ellipse { border-radius: 50%; display: block; }
+
+.abs { position: absolute; box-sizing: border-box; }
+
+.canvas {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: transparent;
+  overflow: visible;
+}
+
+/* Card base */
+.card {
+  background: var(--color-ffffff);
+  border-radius: 20px;
+}
+
+/* Accessibility */
+:focus-visible {
+  outline: 2px solid var(--ocean-primary);
+  outline-offset: 2px;
+}
+
+/* App container layout to center Figma canvas and add subtle modern styling */
+.app-shell {
+  min-height: 100vh;
+  background: radial-gradient(1200px 800px at 70% 10%, rgba(37, 99, 235, 0.08), transparent 60%) var(--ocean-bg);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.canvas-wrapper {
+  background: var(--ocean-surface);
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+  overflow: auto;
+}
+
+/* Hide scrollbars gracefully for the canvas wrapper */
+.canvas-wrapper::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.canvas-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(17, 24, 39, 0.15);
+  border-radius: 10px;
+}
